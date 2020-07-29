@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="yuni" />
+    <!-- 페이지 작성자 -->
+    <meta name="description" content="에스쁘아 메인 페이지" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- 유저가 손으로 확대하는 기능 막음, 반응형 가능 -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1" />
+
+    <!-- http://ogp.me/ //페이스북 설정으로 카카오톡 등에 보낼때 보이는 사이트에 대한 소개 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="에스쁘아" />
+    <meta property="og:title" content="Build software better, together" />
+    <meta property="og:description" content="에스쁘아 clone coding / 에스쁘아 메인 페이지" />
+    <meta property="og:image" content="img/logo_red.png" />
+    <meta property="og:url" content="https://www.espoir.com/ko/main.do" />
+
+    <!-- https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started.html // 트위터 설정으로 위 페이스북과 설명 동일 -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="에스쁘아" />
+    <meta property="twitter:title" content="Build software better, together" />
+    <meta property="twitter:description" content="에스쁘아 clone coding / 에스쁘아 메인 페이지" />
+    <meta property="twitter:image" content="./img/logo_red.png" />
+    <meta property="twitter:url" content="https://www.espoir.com/ko/main.do" />
+
+    <!-- 구글 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap" rel="stylesheet" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/main_medium.css" media="all and (max-width: 1024px)" />
+    <link rel="stylesheet" href="css/main_small.css" media="(max-width: 768px)" />
+
+    <!-- 슬라이드 css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/90d46678f3.js" crossorigin="anonymous"></script>
+
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- masonry js -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="bodyContent">
+        <!-- 모바일 메뉴 -->
+        <div class="mBox">
+            <div class="inner">
+                <i class="fas fa-times" onclick="closeNav()"></i>
+
+                <div class="loginBox">
+                    <div class="loginTop">
+                        <ul>
+                            <li><a href="#">로그인</a></li>
+                            <li><a href="#">회원가입</a></li>
+                        </ul>
+                    </div>
+
+                    <ul class="categoryBox">
+                        <li><a href="#">NEW &amp; BEST</a></li>
+                        <li><a href="#">SHOP</a></li>
+                        <li><a href="#">EVENT</a></li>
+                        <li><a href="#">SERVICE</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- //모바일 메뉴 -->
+
+        <!-- HEADER -->
+        <header class="header">
+            <!-- topNav -->
+            <div class="red">
+                <div class="topNav inner clearFix">
+                    <ul class="float--right">
+                        <li><a href="#">리뷰보드</a></li>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li class="nationRight">
+                            <select name="nation" id="nation">
+                                <option value="KOR"><a href="#">KOR ∨</a></option>
+                                <option value="ENG"><a href="#">ENG ∨</a></option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //topNav -->
+
+            <!-- logo -->
+            <div class="logoBox">
+                <div class="inner">
+                    <div class="clearFix">
+                        <div class="menuGroup float--left">
+                            <div id="toggleBtn" class="navBtn">
+                                <i class="fas fa-bars" onclick="openNav()"></i>
+                            </div>
+
+                            <ul class="mainMeun toggle">
+                                <li><a href="#">NEW &amp; BEST</a></li>
+                                <li><a href="#">SHOP</a></li>
+                                <li><a href="#">EVENT</a></li>
+                                <li><a href="#">SERVICE</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="logo float--left">
+                            <a href="#"><img src="./img/logo_red.png" alt="로고이미지" /></a>
+                        </div>
+
+                        <div class="searchBox float--right">
+                            <div class="cart float--right">
+                                <img src="./img/btn_bsk.gif" alt="장바구니" />
+                                <span class="count"></span>
+                            </div>
+
+                            <div id="toggleBtn" class="searchBtn">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="search float--right toggle">
+                                <i class="fas fa-search"></i>
+                                <input type="text" name="search" id="search" placeholder="SEARCH" />
+                                <i class="far fa-times-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //logo -->
+        </header>
+        <!-- //HEADER -->
+
+        <!-- content -->
+        <section class="content">
+            <div class="inner">
+                <!-- Main slider -->
+                <div class="swiper-container swiper-mainslider">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <img class="pc" alt="메인 슬라이드 이미지" src="./img/IMG1593aZB510423474.jpg" />
+                                <img class="mobile" alt="메인 슬라이드 이미지" src="./img/IMG1593ohQ510428357.jpg" />
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <img class="pc" alt="메인 슬라이드 이미지" src="./img/IMG1594Qmn964533317.jpg" />
+                                <img class="mobile" alt="메인 슬라이드 이미지" src="./img/IMG1594jYo964539885.jpg" />
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <img class="pc" alt="메인 슬라이드 이미지" src="./img/IMG1594Prm968217485.jpg" />
+                                <img class="mobile" alt="메인 슬라이드 이미지" src="./img/IMG1594Gbv968221847.jpg" />
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Add Arrows -->
+                    <div class="btnGroup">
+                        <div class="swiper-button-next swiper-button-white"></div>
+                        <div class="swiper-button-prev swiper-button-white"></div>
+                    </div>
+                </div>
+                <!-- //Main slider -->
+
+                <!-- 신상품 -->
+                <div class="pickProduct widthBox">
+                    <h3 class="title">CREW PICK</h3>
+
+                    <ul class="productUl">
+                        <li>
+                            <a class="productImg" href="#">
+                                <img class="hover hoverBefore" src="img/IMG1595ktW228272287.jpg" alt="" />
+                                <img class="hover hoverAfter" src="img/IMG1595NWk208463515_320.png" alt="" />
+
+                                <i class="fas fa-shopping-bag"></i>
+                            </a>
+
+                            <div class="productDetail">
+                                <h4><a href="#">원조 틴트 맛집! 가벼운 피팅립</a></h4>
+                                <p class="detailInfo">[사은품]NEW 꾸뛰르 립 플루이드 벨벳</p>
+                                <div class="price clearFix">
+                                    <div class="float--left">
+                                        ￦ 15,200<span class="sale">￦ 19,000</span>
+                                    </div>
+                                    <div class="float--right">20%</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a class="productImg" href="#">
+                                <img class="hover hoverBefore" src="img/IMG1595uqc240121229.jpg" alt="" />
+                                <img class="hoverAfter hover" src="img/IMG1594ZEl101186530.png" alt="" />
+
+                                <i class="fas fa-shopping-bag"></i>
+                            </a>
+
+                            <div class="productDetail">
+                                <h4><a href="#">조이 픽ㅡ크 묻어남 없는 매트립</a></h4>
+                                <p class="detailInfo">[사은품]NEW 꾸뛰르 립 플루이드 벨벳</p>
+                                <div class="price clearFix">
+                                    <div class="float--left">
+                                        ￦ 20,000
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a class="productImg" href="#">
+                                <img class="hover hoverBefore" src="img/IMG1595Uvy228228596.jpg" alt="" />
+                                <img class="hoverAfter hover" src="img/IMG1594Xqp620754841.png" alt="" />
+
+                                <i class="fas fa-shopping-bag"></i>
+                            </a>
+
+                            <div class="productDetail">
+                                <h4>
+                                    <a href="#">[사은품] 땀과 피지, 유분에 강한 밀착 커버!</a>
+                                </h4>
+                                <p class="detailInfo">테이핑 커버 쿠션 SPF25 PA++</p>
+                                <div class="price clearFix">
+                                    <div class="float--left">
+                                        ￦ 29,700<span class="sale">￦ 33,000</span>
+                                    </div>
+                                    <div class="float--right">10%</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a class="productImg" href="#">
+                                <img class="hover hoverBefore" src="img/IMG1595rQq293929269.jpg" alt="" />
+                                <img class="hoverAfter hover" src="img/IMG1595Tpx307974337.png" alt="" />
+
+                                <i class="fa fa-shopping-bag"></i>
+                            </a>
+
+                            <div class="productDetail">
+                                <h4><a href="#">[사은품] 여름 건성 쿠션을 찾는다면</a></h4>
+                                <p class="detailInfo">테이핑 커버 모이스트 쿠션 SPF42 PA++</p>
+                                <div class="price clearFix">
+                                    <div class="float--left">
+                                        ￦ 29,700<span class="sale">￦ 33,000</span>
+                                    </div>
+                                    <div class="float--right">10%</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a class="productImg" href="#">
+                                <img class="hover hoverBefore" src="img/IMG1595ktW228272287.jpg" alt="" />
+                                <img class="hover hoverAfter" src="img/IMG1595NWk208463515_320.png" alt="" />
+
+                                <i class="fas fa-shopping-bag"></i>
+                            </a>
+
+                            <div class="productDetail">
+                                <h4><a href="#">원조 틴트 맛집! 가벼운 피팅립</a></h4>
+                                <p class="detailInfo">[사은품]NEW 꾸뛰르 립 플루이드 벨벳</p>
+                                <div class="price clearFix">
+                                    <div class="float--left">
+                                        ￦ 15,200<span class="sale">￦ 19,000</span>
+                                    </div>
+                                    <div class="float--right">20%</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a class="productImg" href="#">
+                                <img class="hover hoverBefore" src="img/IMG1595uqc240121229.jpg" alt="" />
+                                <img class="hoverAfter hover" src="img/IMG1594ZEl101186530.png" alt="" />
+
+                                <i class="fas fa-shopping-bag"></i>
+                            </a>
+
+                            <div class="productDetail">
+                                <h4><a href="#">조이 픽ㅡ크 묻어남 없는 매트립</a></h4>
+                                <p class="detailInfo">[사은품]NEW 꾸뛰르 립 플루이드 벨벳</p>
+                                <div class="price clearFix">
+                                    <div class="float--left">
+                                        ￦ 20,000
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a class="productImg" href="#">
+                                <img class="hover hoverBefore" src="img/IMG1595Uvy228228596.jpg" alt="" />
+                                <img class="hoverAfter hover" src="img/IMG1594Xqp620754841.png" alt="" />
+
+                                <i class="fas fa-shopping-bag"></i>
+                            </a>
+
+                            <div class="productDetail">
+                                <h4>
+                                    <a href="#">[사은품] 땀과 피지, 유분에 강한 밀착 커버!</a>
+                                </h4>
+                                <p class="detailInfo">테이핑 커버 쿠션 SPF25 PA++</p>
+                                <div class="price clearFix">
+                                    <div class="float--left">
+                                        ￦ 29,700<span class="sale">￦ 33,000</span>
+                                    </div>
+                                    <div class="float--right">10%</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a class="productImg" href="#">
+                                <img class="hover hoverBefore" src="img/IMG1595rQq293929269.jpg" alt="" />
+                                <img class="hoverAfter hover" src="img/IMG1595Tpx307974337.png" alt="" />
+
+                                <i class="fa fa-shopping-bag"></i>
+                            </a>
+
+                            <div class="productDetail">
+                                <h4><a href="#">[사은품] 여름 건성 쿠션을 찾는다면</a></h4>
+                                <p class="detailInfo">테이핑 커버 모이스트 쿠션 SPF42 PA++</p>
+                                <div class="price clearFix">
+                                    <div class="float--left">
+                                        ￦ 29,700<span class="sale">￦ 33,000</span>
+                                    </div>
+                                    <div class="float--right">10%</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 리뷰 -->
+            <h3 class="title">REAL REVIEW</h3>
+            <div class="reviewBox">
+                <div class="inner">
+                    <div class="clearFix">
+                        <div class="video float--left">
+                            <div style="position: relative; height: 0; padding-bottom: 56.25%;">
+                                <iframe
+                                    src="https://www.youtube.com/embed/VFdoYtnQCnI?version=2&rel=0&mute=0&playlist=VFdoYtnQCnI"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen style="position: absolute; width: 100%; height: 100%;"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="productSlider float--right">
+                            <h3>이사배 | 펜슬 아이라이너로만 시원한 눈매 만들기!</h3>
+                            <h4>RELATED PRODUCTS</h4>
+
+                            <div class="swiper-productSlider swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a class="productImg" href="#">
+                                            <img class="hover hoverBefore" src="img/IMG1595rQq293929269.jpg" alt="" />
+                                            <img class="hoverAfter hover" src="img/IMG1595Tpx307974337.png" alt="" />
+                                        </a>
+
+                                        <div class="productDetail">
+                                            <h4>
+                                                <a href="#">[사은품] 여름 건성 쿠션을 찾는다면</a>
+                                            </h4>
+                                            <div class="price">
+                                                ￦ 29,700
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a class="productImg" href="#">
+                                            <img class="hover hoverBefore" src="img/IMG1595Uvy228228596.jpg" alt="" />
+                                            <img class="hoverAfter hover" src="img/IMG1594Xqp620754841.png" alt="" />
+                                        </a>
+
+                                        <div class="productDetail">
+                                            <h4>
+                                                <a href="#">[사은품] 땀과 피지, 유분에 강한 밀착 커버!</a>
+                                            </h4>
+                                            <div class="price">
+                                                ￦ 29,700
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a class="productImg" href="#">
+                                            <img class="hover hoverBefore" src="img/IMG1595rQq293929269.jpg" alt="" />
+                                            <img class="hoverAfter hover" src="img/IMG1595Tpx307974337.png" alt="" />
+                                        </a>
+
+                                        <div class="productDetail">
+                                            <h4>
+                                                <a href="#">[사은품] 여름 건성 쿠션을 찾는다면</a>
+                                            </h4>
+                                            <div class="price">
+                                                ￦ 29,700
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a class="productImg" href="#">
+                                            <img class="hover hoverBefore" src="img/IMG1595Uvy228228596.jpg" alt="" />
+                                            <img class="hoverAfter hover" src="img/IMG1594Xqp620754841.png" alt="" />
+                                        </a>
+
+                                        <div class="productDetail">
+                                            <h4>
+                                                <a href="#">[사은품] 땀과 피지, 유분에 강한 밀착 커버!</a>
+                                            </h4>
+                                            <div class="price">
+                                                ￦ 29,700
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <!-- Add Arrows -->
+                                <div class="btnGroup">
+                                    <div class="swiper-button-next swiper-button-black"></div>
+                                    <div class="swiper-button-prev swiper-button-black"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LOOK BOOK -->
+            <div class="lookbookBox">
+                <div class="inner">
+                    <h3 class="title">LOOK BOOK</h3>
+                    <h5>REAL EYE MAKE UP LOOK</h5>
+
+                    <div class="look-imgBox clearFix">
+                        <div class="float--left">
+                            <img src="./img/IMG1578MYo294232008.jpg" alt="" />
+                        </div>
+
+                        <div class="float--right">
+                            <img src="./img/IMG1578CrI293768553.jpg" alt="" class="lookMain" />
+                            <img src="./img/IMG1578iox296725083.png" alt="" class="lookRight" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //content -->
+
+        <footer>
+            <div class="inner">
+                <div class="footerBox">
+                    <ul>
+                        <li><a href="#">서비스 이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">영상기기 관리방침</a></li>
+                        <li><a href="#">사업자 정보 확인</a></li>
+                        <li><a href="#">이메일 무단수집 거부</a></li>
+                        <li><a href="#">전자공고</a></li>
+                    </ul>
+
+                    <div class="footerInfo">
+                        <p>
+                            <span>(주)에스쁘아 대표이사: 임중식</span>
+                            <span>본사 : 서울특별시 용산구 한강대로 100 (한강로2가) 6층</span>
+                        </p>
+                        <p>
+                            <span>사업자번호: 104-86-58598</span>
+                            <span>통신판매업신고번호 : 제 2017-서울용산-1293호
+                                <a href="#">사업자 정보 확인</a></span>
+                        </p>
+                        <p>
+                            <span>개인정보보호책임자: 하태식 </span>
+                            <span>고객상담: <a href="tel:080-619-8888">080-619-8888 </a></span>
+                        </p>
+                        <p>
+                            <span>이메일:
+                                <a href="mailto:espoirmall@espoir.com">espoirmall@espoir.com
+                                </a></span>
+                            <span>호스팅제공자 : ㈜에스쁘아</span>
+                        </p>
+                        <p>
+                            고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서
+                            가입한 이니시스 구매안전 서비스(에스크로)를 이용하실 수
+                            있습니다. <a href="#">서비스 가입사실 확인</a>
+                        </p>
+                    </div>
+
+                    <p class="copy">
+                        Copyright &copy; 2018 espoir. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

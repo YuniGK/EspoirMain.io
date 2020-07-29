@@ -1,0 +1,453 @@
+@charset "UTF-8";
+
+/* common */
+#bodyContent {
+    font-family: "Noto Sans KR", "Carrois Gothic SC", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #333;
+    background: #fff;
+    word-break: keep-all;
+    word-wrap: break-word;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.inner {
+    width: 1280px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+/* float clearfix */
+.clearFix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.float--left {
+    float: left;
+}
+
+.float--right {
+    float: right;
+}
+
+/* widthBox */
+.widthBox {
+    overflow: hidden;
+    width: 100%;
+}
+
+.widthBox ul {
+    width: 102%;
+}
+
+.widthBox li {
+    width: 23%;
+    margin: 0 2% 80px 0;
+    float: left;
+}
+
+/* // common */
+
+/* header */
+header .red {
+    background-color: red;
+}
+
+header .red select {
+    -webkit-appearance: none;
+    /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+    background-color: red;
+    border: 1px solid red;
+    width: 80px;
+    text-align: right;
+    padding: .8em .5em;
+    color: #fff;
+    border-radius: 0px;
+}
+
+/* IE 10, 11의 네이티브 화살표 숨기기 */
+header .red select::-ms-expand {
+    display: none;
+}
+
+header .red option {
+    padding: 5px 0;
+}
+
+header .red ul {
+    width: 300px;
+    text-align: right;
+}
+
+header .red a {
+    font-size: 0.85rem;
+    line-height: 2.5rem;
+    color: #fff;
+}
+
+header ul li {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 10px 0 0;
+}
+
+header li:last-child {
+    padding: 0 !important;
+}
+
+header .logoBox.fixed {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+}
+
+header .logoBox.fixed .logo img {
+    padding: 16px 0;
+    height: 28px;
+}
+
+header .logoBox.fixed .clearFix>div {
+    line-height: 60px;
+}
+
+header .logoBox.fixed .search {
+    top: 3px;
+}
+
+header .logoBox {
+    height: 100px;
+}
+
+header .clearFix,
+header .logo {
+    line-height: 0 !important;
+}
+
+header .clearFix>div {
+    width: 33.33%;
+    line-height: 100px;
+}
+
+header .logo {
+    text-align: center;
+}
+
+header .logo a {
+    display: inline-block;
+    width: 100%;
+}
+
+header .logo img {
+    padding: 25px 0;
+}
+
+header .logoBox li {
+    padding: 0 40px 0 0;
+}
+
+header .searchBox {
+    text-align: right;
+}
+
+header .searchBox .search {
+    width: 180px;
+    text-align: right;
+    margin: 0 40px 0 0;
+    position: relative;
+    top: 20px;
+}
+
+header .searchBox .search input {
+    box-sizing: border-box;
+    padding: 0 10px;
+    width: calc(100% - 36px);
+}
+
+header .searchBox .search i,
+header .searchBox .search input {
+    border: none;
+    border-bottom: 1px solid rgb(24, 23, 23);
+    float: left;
+    font-size: 1rem;
+    line-height: 2.5rem;
+}
+
+#toggleBtn,
+.mBox {
+    display: none;
+}
+
+.search input::-ms-input-placeholder {
+    color: #cacaca;
+}
+
+.search input::-moz-input-placeholder {
+    color: #cacaca;
+}
+
+.search input::-webkit-input-placeholder {
+    color: #cacaca;
+}
+
+/* content */
+.swiper-mainslider .btnGroup {
+    position: absolute;
+    width: 100px;
+    top: 15%;
+    left: 10%;
+}
+
+.content .swiper-container {
+    width: 100%;
+}
+
+.content .swiper-container a {
+    display: block;
+    width: 100%;
+}
+
+.content .swiper-container img {
+    width: 100%;
+}
+
+.content .swiper-container .mobile {
+    display: none;
+}
+
+/* pick */
+h3.title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 160px 0 60px;
+}
+
+.widthBox li:hover .fa-shopping-bag {
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+
+.widthBox li .fa-shopping-bag {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.swiper-productSlider .productImg,
+.widthBox li .productImg {
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-productSlider .productImg img,
+.widthBox li .productImg img {
+    width: 100%;
+}
+
+.swiper-productSlider li:hover .productImg img,
+.widthBox li:hover .productImg img {
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+
+.swiper-productSlider li .hoverAfter,
+.widthBox li .hoverAfter {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.productUl .productDetail h4 {
+    margin: 15px 0;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 0 10px 0 0;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.productUl .productDetail .detailInfo {
+    font-size: 0.85rem;
+    margin: 0 0 40px;
+    box-sizing: border-box;
+    padding: 0 10px 0 0;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.productUl .price .float--left {
+    width: 70%;
+}
+
+.productUl .price .sale {
+    font-size: 0.85rem;
+    display: inline-block;
+    padding: 0 0 0 10px;
+    text-decoration: line-through;
+    color: #ddd;
+}
+
+.productUl .price .float--right {
+    width: 30%;
+    color: red;
+    text-align: right;
+}
+
+/* reviewBox */
+.reviewBox {
+    background: #fafafa;
+    padding: 100px 0;
+}
+
+.reviewBox .video {
+    width: 60%;
+}
+
+.reviewBox .productSlider {
+    width: 40%;
+    box-sizing: border-box;
+    padding-left: 40px;
+}
+
+.reviewBox .productSlider h3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+}
+
+.reviewBox .productSlider h4 {
+    margin: 30px 0 20px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.reviewBox .productDetail h4 {
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 20px 0 10px;
+}
+
+.reviewBox .productDetail .price {
+    font-size: 0.8rem;
+}
+
+/* lookbookBox */
+.lookbookBox .title {
+    margin-bottom: 30px;
+}
+
+.lookbookBox h5 {
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 0 0 60px;
+}
+
+.lookbookBox .look-imgBox img {
+    width: 100%;
+}
+
+.lookbookBox .look-imgBox .float--left {
+    width: 28%;
+    position: relative;
+}
+
+.lookbookBox .look-imgBox .float--left img {
+    position: absolute;
+    top: 120px;
+}
+
+.lookbookBox .look-imgBox .float--right {
+    width: 72%;
+    position: relative;
+}
+
+.lookbookBox .look-imgBox .lookMain {
+    max-width: 554px;
+    box-sizing: border-box;
+    padding: 0 0 0 20px;
+}
+
+.lookbookBox .look-imgBox .lookRight {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    max-width: 420px;
+}
+
+/* footer */
+footer {
+    background: #000;
+    margin: 120px 0 0;
+    padding: 60px 0 20px;
+}
+
+footer,
+footer a {
+    color: #fff;
+    font-weight: normal;
+
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+}
+
+footer ul {
+    margin: 0 0 20px;
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 0 10px 0 0;
+}
+
+footer ul li:last-child {
+    padding: 0;
+}
+
+footer p span {
+    display: inline-block;
+    padding: 0 20px 0 0;
+}
+
+footer p,
+footer p a {
+    font-size: 0.65rem;
+    color: #9f9f9f;
+}
+
+footer .copy {
+    margin: 40px 0 0;
+}
+
+footer .copy,
+footer .copy a {
+    font-size: 0.8rem;
+}

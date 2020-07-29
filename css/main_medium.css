@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+/* common */
+#bodyContent {
+    font-size: 12px;
+}
+
+.inner {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.widthBox li {
+    width: 31.33%;
+}
+
+/* header */
+header .toggle {
+    display: none;
+}
+
+header .toggle.on {
+    display: block;
+}
+
+header #toggleBtn {
+    display: inline-block;
+    font-size: 18px;
+    position: relative;
+    top: -5px;
+}
+
+header #toggleBtn.searchBtn {
+    padding-right: 10px;
+}
+
+.reviewBox .video,
+.reviewBox .productSlider {
+    width: 100%;
+}
+
+.reviewBox .productSlider {
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+
+.mBox {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 200;
+    left: -100%;
+    padding: 40px 0;
+    top: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+    background-color: #fff;
+    display: block;
+}
+
+.mBox .inner {
+    position: relative;
+}
+
+.mBox .fa-times {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    font-size: 2rem;
+}
+
+.mBox .loginTop li {
+    display: inline-block;
+    padding: 0 20px 0 0;
+}
+
+.mBox .loginTop li {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.mBox .categoryBox {
+    padding: 40px 0;
+}
+
+.mBox .categoryBox a {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 4rem;
+}
+
+.lookbookBox .inner {
+    overflow: hidden;
+}
+
+.lookbookBox .look-imgBox {
+    width: 102%;
+}
+
+.lookbookBox .look-imgBox .float--left {
+    width: 28%;
+    margin: 0 2% 0 0;
+}
+
+.lookbookBox .look-imgBox .float--right {
+    width: 68%;
+    margin: 0 2% 0 0;
+}
+
+.lookbookBox .look-imgBox .float--right>img {
+    max-width: 48%;
+    margin: 0 4% 0 0;
+    float: left;
+}
+
+.lookbookBox .look-imgBox .float--left img {
+    position: static;
+}
+
+.lookbookBox .look-imgBox .lookMain {
+    padding: 0;
+}
+
+.lookbookBox .look-imgBox .lookRight {
+    position: static;
+    margin: 0 !important;
+}
